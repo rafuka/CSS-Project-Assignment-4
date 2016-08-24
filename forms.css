@@ -28,7 +28,7 @@ form {
 	color: #F21B3F;
 }
 
-.form-group input {
+.form-group input, .form-group textarea  {
 	width: 100%;
 	height: 40px;
 	padding: 7px 10px;
@@ -40,6 +40,11 @@ form {
 	outline-color: #51d267;
 	outline-offset: -3px;
 	color: #555;
+}
+
+.form-group textarea {
+	height: 120px;
+	resize: none;
 }
 
 .form-group select {
@@ -62,6 +67,7 @@ form {
 	outline-width: 2px;
 	outline-color: #51d267;
 	outline-offset: -3px;
+	color: #555;
 }
 
 .form-group input[type="radio"] {
@@ -69,6 +75,12 @@ form {
 	width: initial;
 	padding: 20px;
 	float: left;
+}
+
+.form-group input[type="checkbox"] {
+	display: inline-block;
+	width: initial;
+	height: initial;
 }
 
 input#search-box {
@@ -122,6 +134,7 @@ button[type="submit"]:active {
 form fieldset {
 	font-family: monospace;
 	border: 1px dotted #43c358;
+	border-radius: 5px;
 	margin: 5px;
 }
 
@@ -133,14 +146,42 @@ form#login label {
 	display: inline-block;
 }
 
-form#login input[type="checkbox"] {
-	display: inline-block;
-	width: initial;
-	height: initial;
-}
+
 
 form#login h1 {
 	text-align: center;
 	color: #43c358;
+}
+
+form#login button {
+	margin: 0;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+form#color textarea {
+	resize: none;
+	width: 100%;
+	height: 50px;
+}
+
+#red-label {
+	color: red;
+}
+
+#green-label {
+	color: green;
+}
+
+#blue-label {
+	color: blue;
+}
+
+#copy-label {
+	display: inline-block;
+}
+
+form#addresses fieldset {
+	margin-bottom: 20px;
 }
 
