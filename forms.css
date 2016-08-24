@@ -8,7 +8,7 @@ h1, h2 {
 
 form {
 	width: 320px;
-	margin: 20px;
+	margin: 20px auto;
 	padding: 10px;
 	border: 1px solid #eee;
 	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -24,6 +24,7 @@ form {
 	font-family: sans-serif;
 	text-transform: lowercase;
 	font-variant: small-caps;
+	font-weight: bold;
 	color: #F21B3F;
 }
 
@@ -125,6 +126,21 @@ form fieldset {
 }
 
 form fieldset legend {
+	color: #43c358;
+}
+
+form#login label {
+	display: inline-block;
+}
+
+form#login input[type="checkbox"] {
+	display: inline-block;
+	width: initial;
+	height: initial;
+}
+
+form#login h1 {
+	text-align: center;
 	color: #43c358;
 }
 
