@@ -83,6 +83,28 @@ form {
 	height: initial;
 }
 
+.form-group .card-group {
+	display: inline-block;
+	width: initial;
+	margin-right: 10px;
+}
+
+.card-group select {
+	margin: 0px;
+}
+
+select#month {
+	width: 70px;
+}
+
+select#year {
+	width: 90px;
+}
+
+input#csv {
+	width: 55px;
+}
+
 input#search-box {
 	background-image: url('search-icon.png');
     background-repeat: no-repeat;
