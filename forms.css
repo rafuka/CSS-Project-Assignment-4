@@ -47,6 +47,7 @@ form {
 	appearance: none;
 	width: 100%;
 	height: 40px;
+	margin-top: 10px;
 	font-size: 16px;
 	font-family: monospace;
 	padding: 7px;
@@ -62,6 +63,13 @@ form {
 	outline-offset: -3px;
 }
 
+.form-group input[type="radio"] {
+	display: inline-block;
+	width: initial;
+	padding: 20px;
+	float: left;
+}
+
 input#search-box {
 	background-image: url('search-icon.png');
     background-repeat: no-repeat;
@@ -70,7 +78,6 @@ input#search-box {
     background-position-y: 50%;
     padding-right: 40px;
 }
-
 
 button[type="submit"] {
 	border: none;
@@ -98,5 +105,26 @@ button[type="submit"]:active {
 	color: #43c358;
 	background-color: white;
 
+}
+
+#questionnaire p {
+	margin-left: 30px;
+	font-family: monospace;
+}
+
+#questionnaire hr {
+	clear: both;
+	width: 62%;
+	border-color: #ddffe4;
+}
+
+form fieldset {
+	font-family: monospace;
+	border: 1px dotted #43c358;
+	margin: 5px;
+}
+
+form fieldset legend {
+	color: #43c358;
 }
 

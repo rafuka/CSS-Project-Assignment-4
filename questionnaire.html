@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questionnaire Form</title>
+	<link rel="stylesheet" href="forms.css">
+</head>
+<body>
+	<form id="questionnaire">
+		<fieldset form="questionnaire">
+			<legend>Pick your flavor</legend>
+			<div class="form-group">
+				<label for="chocolate">Chocolate</label>
+				<input type="radio" name="flavour" value="chocolate" id="chocolate">
+				<p>Some info about the chocolate.</p>
+			</div>
+			<hr>
+			<div class="form-group">
+				<label for="vanilla">Vanilla</label>
+				<input type="radio" name="flavour" value="vanilla" id="vanilla">
+				<p>Some info about the vanilla.</p>
+			</div>
+			<hr>
+			<div class="form-group">
+				<label for="strawberry">Strawberry</label>
+				<input type="radio" name="flavour" value="strawberry" id="strawberry">
+				<p>Some info about the strawberry.</p>
+			</div>
+			<hr>
+			<div class="form-group">
+				<label for="lemon">Lemon</label>
+				<input type="radio" name="flavour" value="lemon" id="lemon">
+				<p>Some info about the lemon.</p>
+			</div>
+			<hr>
+			<div class="form-group">
+				<label for="other">Other</label>
+				<input type="radio" name="flavour" value="other" id="other">
+				<input type="text" name="flavour-typed" id="other-text"> 
+			</div>
+
+			<button type="submit" form="questioinnaire">Submit!</button>
+		</fieldset>
+	</form>
+</body>
+</html>
