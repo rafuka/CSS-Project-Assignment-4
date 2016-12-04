@@ -3,6 +3,7 @@
 <head>
 	<title>Login Form</title>
 	<link rel="stylesheet" href="forms.css">
+	<script src="validator.js"></script>
 </head>
 <body>
 	<form id="login">
@@ -17,5 +18,24 @@
 		</div>
 		<button type="submit" form="login">Log In!</button>
 	</form>
+	<script type="text/javascript">
+		var loginForm = document.getElementById('login');
+		var username = document.getElementById('username');
+		var password = document.getElementById('password');
+
+		loginForm.addEventListener('submit', function(event) {
+			if (validator.isLength(username.value, 1) || 
+				validator.isLength(password.value, 7) ||
+				validator.countWords(username.value) > 1) {
+
+				loginForm.className = "invalid";
+				event.preventDefault();
+			}
+			else {
+				loginForm.className = "valid";
+				event.preventDefault();
+			}
+		});
+	</script>
 </body>
 </html>

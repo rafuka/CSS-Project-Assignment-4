@@ -3,6 +3,7 @@
 <head>
 	<title>Scheduling Form</title>
 	<link rel="stylesheet" href="forms.css">
+	<script src="validator.js"></script>
 </head>
 <body>
 	<form id="schedule">
@@ -17,14 +18,14 @@
 		<div class="form-group">
 			<label for="timezone">time zone</label>
 			<select id="timezone">
-				<option>timezone</option>
-				<option>timezone</option>
-				<option>timezone</option>
-				<option>timezone</option>
-				<option>timezone</option>
-				<option>timezone</option>
-				<option>timezone</option>
-				<option>timezone</option>
+				<option>timezone 1</option>
+				<option>timezone 2</option>
+				<option>timezone 3</option>
+				<option>timezone 4</option>
+				<option>timezone 5</option>
+				<option>timezone 6</option>
+				<option>timezone 7</option>
+				<option>timezone 8</option>
 			</select>
 		</div>
 		<div class="form-group">
@@ -41,5 +42,29 @@
 		</div>
 		<button type="submit" form="schedule">Submit</button>
 	</form>
+	<script type="text/javascript">
+		var scheduleForm = document.getElementById('schedule');
+		var date = document.getElementById('date');
+		var time = document.getElementById('time');
+		var message = document.getElementById('message');
+		var number = document.getElementById('number');
+		var email = document.getElementById('email');
+
+		scheduleForm.addEventListener('submit', function (event) {
+			if (validator.isEmpty(date.value) || 
+				validator.isEmpty(time.value) ||
+				validator.isEmpty(message.value) ||
+				validator.isEmpty(number.value) ||
+				!(validator.isEmailAddress(email.value))) {
+
+				scheduleForm.className = "invalid";
+				event.preventDefault();
+			}
+			else {
+				scheduleForm.className = "valid";
+				event.preventDefault();
+			}
+		});
+	</script>
 </body>
 </html>

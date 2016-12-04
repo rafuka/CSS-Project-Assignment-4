@@ -3,6 +3,7 @@
 <head>
 	<title>Signup Form</title>
 	<link rel="stylesheet" href="forms.css">
+	<script src="validator.js"></script>
 </head>
 <body>
 	<form id="signup">
@@ -33,5 +34,29 @@
 
 		<button type="submit" form="signup">Sign Up!</button>
 	</form>
+	<script type="text/javascript">
+		var signupForm = document.getElementById('signup');
+		var firstName = document.getElementById('firstname');
+		var lastName = document.getElementById('lastname');
+		var email = document.getElementById('email');
+		var birthDate = document.getElementById('birthdate');
+		var password = document.getElementById('password');
+
+		signupForm.addEventListener('submit', function(event) {
+			if (validator.isLength(firstName.value, 1) ||
+				validator.isLength(lastName.value, 1) ||
+				!(validator.isEmailAddress(email.value)) ||
+				validator.isEmpty(birthDate.value) ||
+				validator.isLength(password.value, 7)) {
+
+				signupForm.className = "invalid";
+				event.preventDefault();
+			}
+			else {
+				signupForm.className = "valid";
+				event.preventDefault();
+			}
+		});
+	</script>
 </body>
 </html>

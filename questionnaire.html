@@ -3,6 +3,7 @@
 <head>
 	<title>Questionnaire Form</title>
 	<link rel="stylesheet" href="forms.css">
+	<script src="validator.js"></script>
 </head>
 <body>
 	<form id="questionnaire">
@@ -38,8 +39,39 @@
 				<input type="text" name="flavour-typed" id="other-text"> 
 			</div>
 
-			<button type="submit" form="questioinnaire">Submit!</button>
+			<button type="submit" form="questionnaire">Submit!</button>
 		</fieldset>
 	</form>
+	<script type="text/javascript">
+		var questionForm = document.getElementById('questionnaire');
+		var chocolate = document.getElementById('chocolate');
+		var vanilla = document.getElementById('vanilla');
+		var strawberry = document.getElementById('strawberry');
+		var lemon = document.getElementById('lemon');
+		var other = document.getElementById('other');
+		var otherText = document.getElementById('other-text');
+
+		questionForm.addEventListener('submit', function(event) {
+
+			if (chocolate.checked || vanilla.checked || strawberry.checked || lemon.checked) {
+				questionForm.className = "valid";
+				event.preventDefault();
+			}
+			else if (other.checked) {
+				if (validator.isEmpty(otherText.value)) {
+					questionForm.className = "invalid";
+					event.preventDefault();
+				}
+				else {
+					questionForm.className = "valid";
+					event.preventDefault();
+				}
+			}
+			else {
+				questionForm.className = "invalid";
+				event.preventDefault();
+			}	
+		});
+	</script>
 </body>
 </html>

@@ -3,20 +3,40 @@
 <head>
 	<title>Color Form</title>
 	<link rel="stylesheet" href="forms.css">
+	<script src="validator.js"></script>
 </head>
 <body>
 	<form id="color">
 		<div class="form-group">
 			<label for="red-bar" id="red-label">red</label>
-			<input type="range" min="0" max="255" step="5" id="red-bar">
+			<input type="range" min="0" max="255" step="1" value="255" id="red-bar">
 			<label for="green-bar" id="green-label">green</label>
-			<input type="range" min="0" max="255" step="5" id="green-bar">
+			<input type="range" min="0" max="255" step="1" value="255" id="green-bar">
 			<label for="blue-bar" id="blue-label">blue</label>
-			<input type="range" min="0" max="255" step="5" id="blue-bar">
+			<input type="range" min="0" max="255" step="1" value="255" id="blue-bar">
 		</div>
 		<div class="form-group">
 			<textarea></textarea>
 		</div>
 	</form>
+	<script type="text/javascript">
+		var colorForm = document.getElementById('color');
+		var redBar = document.getElementById('red-bar');
+		var greenBar = document.getElementById('green-bar');
+		var blueBar = document.getElementById('blue-bar');
+
+
+		colorForm.addEventListener('submit', function(event) {
+			var text = "rgb(" + redBar.value ", " + greenBar.value + ", " + blueBar.value + ")";
+			if (validator.isRGB(text)) {
+				colorForm.className = "valid";
+			}
+			else {
+				colorForm.className = "invalid";
+			}
+
+			event.preventDefault();
+		});
+	</script>
 </body>
 </html>

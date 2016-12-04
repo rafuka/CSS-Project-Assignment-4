@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Search Form</title>
-<link rel="stylesheet" href="forms.css">
+	<title>Search Form</title>
+	<link rel="stylesheet" href="forms.css">
+	<script src="validator.js"></script>
 </head>
 <body>
 	<form id="search">
@@ -20,5 +21,21 @@
 
 		<button type="submit" form="search">Search!</button>
 	</form>
+	<script type="text/javascript">
+		var searchForm = document.getElementById('search');
+		var searchBox = document.getElementById('search-box');
+
+		searchForm.addEventListener('submit', function(event) {
+			var text = searchBox.value;
+			if (validator.isEmpty(text)) {
+				searchForm.className = "invalid";
+				event.preventDefault();
+			}
+			else {
+				searchForm.className = "valid";
+				event.preventDefault();
+			}
+		});
+	</script>
 </body>
 </html>
