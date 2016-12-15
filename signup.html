@@ -19,7 +19,7 @@
 
 		<div class="form-group">
 			<label for="email">E-mail:</label>
-			<input type="email" id="email" name="email">
+			<input type="email" id="email" name="email" required>
 		</div>
 
 		<div class="form-group">
@@ -31,11 +31,12 @@
 			<label for="password">Password:</label>
 			<input type="password" id="password" name="password">
 		</div>
-
-		<button type="submit" form="signup">Sign Up!</button>
+		<div class="form-group">
+			<button type="submit" form="signup">Sign Up!</button>
+		</div>
 	</form>
 	<script type="text/javascript">
-		var signupForm = document.getElementById('signup');
+		/*var signupForm = document.getElementById('signup');
 		var firstName = document.getElementById('firstname');
 		var lastName = document.getElementById('lastname');
 		var email = document.getElementById('email');
@@ -56,7 +57,7 @@
 				signupForm.className = "valid";
 				event.preventDefault();
 			}
-		});
+		});*/
 	</script>
 </body>
 </html>
