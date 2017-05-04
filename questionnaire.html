@@ -2,11 +2,15 @@
 <html>
 <head>
 	<title>Questionnaire Form</title>
+	<link rel="stylesheet" type="text/css" href="cards.css">
 	<link rel="stylesheet" href="forms.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="utf-8">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1”>
 	<script src="validator.js"></script>
 </head>
 <body>
-	<form id="questionnaire">
+	<form class="card" id="questionnaire-form">
 		<fieldset form="questionnaire">
 			<legend>Pick your flavor</legend>
 			<div class="form-group">
@@ -44,7 +48,7 @@
 		</fieldset>
 	</form>
 	<script type="text/javascript">
-		var questionForm = document.getElementById('questionnaire');
+		var questionForm = document.getElementById('questionnaire-form');
 		var chocolate = document.getElementById('chocolate');
 		var vanilla = document.getElementById('vanilla');
 		var strawberry = document.getElementById('strawberry');

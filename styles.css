@@ -1,0 +1,91 @@
+body {
+	margin-top: 100px;
+}
+
+h1, h2 {
+	font-family: sans-serif;
+}
+
+form {
+	max-width: 358px;
+}
+
+form#signup-form {
+
+}
+
+
+form#addresses-form fieldset {
+	margin-bottom: 20px;
+}
+
+form#color-form textarea {
+	resize: none;
+	width: 100%;
+	height: 50px;
+}
+
+form#search-form {
+
+}
+
+form#schedule-form {
+
+}
+
+form#questionnaire-form p {
+	margin-left: 30px;
+	font-family: monospace;
+}
+
+form#questionnaire-form hr {
+	clear: both;
+	width: 62%;
+	border-color: #ddffe4;
+}
+
+form#login-form label {
+	display: inline-block;
+}
+
+form#login-form h1 {
+	text-align: center;
+	color: #43c358;
+}
+
+form#login-form button {
+	margin: 0;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+form#credit-form {
+
+}
+
+
+
+#red-label {
+	color: red;
+}
+
+#green-label {
+	color: green;
+}
+
+#blue-label {
+	color: blue;
+}
+
+#red-bar, #green-bar, #blue-bar {
+	padding-left: 0;
+	padding-right: 0;
+	border: none;
+}
+
+#copy-label {
+	display: inline-block;
+}
+
+
+

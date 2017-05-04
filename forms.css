@@ -2,22 +2,6 @@
 	box-sizing: border-box;
 }
 
-body {
-	margin: 0;
-	padding: 50px;
-}
-
-h1, h2 {
-	font-family: sans-serif;
-}
-
-form {
-	width: 330px;
-	margin: 20px auto;
-	padding: 10px;
-	border: 1px solid #eee;
-	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-}
 
 .form-group {
 	margin: 15px 25px;
@@ -121,7 +105,7 @@ input#search-box {
 }
 
 button[type="submit"] {
-	border: none;
+	border: 1px solid transparent;
 	outline: none;
 	color: white;
 	background-color: #43c358;
@@ -143,18 +127,8 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
 	color: #43c358;
 	background-color: white;
+	border: 1px solid #43c358;
 
-}
-
-#questionnaire p {
-	margin-left: 30px;
-	font-family: monospace;
-}
-
-#questionnaire hr {
-	clear: both;
-	width: 62%;
-	border-color: #ddffe4;
 }
 
 form fieldset {
@@ -168,52 +142,13 @@ form fieldset legend {
 	color: #43c358;
 }
 
-form#login label {
-	display: inline-block;
+@media (max-width: 360px) {
+	.form-group {
+		margin: 5px;
+	}
 }
 
 
 
-form#login h1 {
-	text-align: center;
-	color: #43c358;
-}
 
-form#login button {
-	margin: 0;
-	margin-bottom: 5px;
-	width: 100%;
-}
-
-form#color textarea {
-	resize: none;
-	width: 100%;
-	height: 50px;
-}
-
-#red-label {
-	color: red;
-}
-
-#green-label {
-	color: green;
-}
-
-#blue-label {
-	color: blue;
-}
-
-#red-bar, #green-bar, #blue-bar {
-	padding-left: 0;
-	padding-right: 0;
-	border: none;
-}
-
-#copy-label {
-	display: inline-block;
-}
-
-form#addresses fieldset {
-	margin-bottom: 20px;
-}
 
